@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>JS Bin</title>
+    <style>
+        body {
+            padding-top: 50px
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="viet">
+    <button type="button" onclick="add()">Add</button>
+    <button type="button" onclick="display()">Display</button>
+    <p id="result"></p>
+</body>
+     <script>
+        let array=["Nguyễn","Hoàng"];
+        let text=[];
+        function add() {
+           text=document.getElementById("viet").value;
+           console.log(text);
+           array.push(text);
+        }
+
+        function display() {
+            for (let i=0;i<array.length;i++) {
+                document.getElementById("result").innerHTML += i + " " + array[i] + "<br>";
+            }
+
+        }
+     </script>
+</html>
